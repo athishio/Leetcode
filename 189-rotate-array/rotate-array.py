@@ -1,7 +1,6 @@
 class Solution:
     def rotate(self, nums: list[int], k: int) -> None:
-        n=len(nums)
-        k%=n
+        k%=len(nums)
         nums.reverse()
         nums[:k]=nums[:k][::-1]
         nums[k:]=nums[k:][::-1]
